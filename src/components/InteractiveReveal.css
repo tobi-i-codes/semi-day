@@ -1,0 +1,74 @@
+.reveal-section {
+  padding: 10vh 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reveal-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background: rgba(255, 255, 255, 0.015);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 28px;
+  text-align: center;
+}
+
+.reveal-button {
+  padding: 16px 36px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  background: rgba(211, 133, 84, 0.05);
+  border-color: rgba(211, 133, 84, 0.3);
+}
+
+.reveal-button:hover {
+  background: rgba(211, 133, 84, 0.1);
+  box-shadow: 0 0 30px rgba(211, 133, 84, 0.15);
+}
+
+.reveal-content {
+  animation: fadeInContent 1s forwards;
+}
+
+@keyframes fadeInContent {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-intro {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: var(--text-primary);
+}
+
+.reasons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.reason-item {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  opacity: 0;
+  animation: fadeInContent 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+
+.reason-item .bullet {
+  font-size: 1.5rem;
+  line-height: 1;
+}

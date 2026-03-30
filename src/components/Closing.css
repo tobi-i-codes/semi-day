@@ -1,0 +1,26 @@
+.closing-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary);
+}
+
+.closing-container {
+  text-align: center;
+}
+
+.closing-text {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.closing-accent {
+  color: var(--text-secondary);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  display: block;
+  margin-top: 24px;
+}

@@ -1,0 +1,112 @@
+.message-section {
+  background-color: var(--bg-secondary);
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.message-container {
+  max-width: 700px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* Removing gap to rely on paragraph margins for consistency */
+  padding: 48px 40px 8vh;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  margin: 4vh auto 10vh;
+  position: relative;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.back-button-wrapper {
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 11px; /* Smaller, more elegant size */
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px 0;
+  margin: 0;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.back-button:hover {
+  color: var(--accent);
+  transform: translateX(-4px);
+  opacity: 1;
+}
+
+/* Radial Glow Behind Content */
+.message-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(211, 133, 84, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.message-header {
+  margin-bottom: 1.5rem; /* Tighter grouping with the badge and the text */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 16px;
+  background: rgba(211, 133, 84, 0.08);
+  border: 1px solid rgba(211, 133, 84, 0.2);
+  border-radius: 100px;
+  box-shadow: 0 0 20px rgba(211, 133, 84, 0.1);
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.badge-text {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+
+.message-text {
+  font-size: clamp(1.1rem, 2.8vw, 1.45rem);
+  line-height: 1.7;
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 3rem; /* Consistent bottom margin for every paragraph */
+}
+
+.message-text .text-accent {
+  color: var(--accent);
+  font-weight: 400;
+}
